@@ -76,7 +76,7 @@
 							@foreach ($faqs as $item)
 								
 							
-							<button class="accordion">{{ $item->question}}</button>
+							<button class="accordion">{{ $item->id}}. {{ $item->question,}}</button>
 							<div class="panel">
 							  <p>{{ $item->answer}}</p>
 							</div>
