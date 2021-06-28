@@ -46,7 +46,9 @@
                         <tbody>
                             @foreach ($desserts as $item)
                                 <tr>
-                                    <td>{{ $item->foto }}</td>
+                                    <td>
+                                        <a href="{{ asset('mainpage/img/gallery/' . $item->foto) }}">Lihat Gambar</a>
+                                    </td>
                                     <td>{{ $item->judul }}</td>
                                     <td>{{ $item->deskripsi }}</td>
                                     <td>{{ $item->harga }}</td>
