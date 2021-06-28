@@ -102,7 +102,6 @@ class DessertsController extends Controller
     {
         //
         $request->validate([
-            'foto' => 'required',
             'foto.*' => 'mimes:jpg,jpeg,png|max:2000',
             'judul' => 'required',
             'deskripsi' => 'required',
