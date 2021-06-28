@@ -40,21 +40,12 @@ Route::resource('coffes', CoffesController::class);
 
 Route::get('/admin', function () {
     $homepages = DB::table('homepages')->get();
-
     $cofeetotal = DB::table('coffes')->count();
     $foodstotal = DB::table('foods')->count();
     $dessertstotal = DB::table('desserts')->count();
 
     return view('admin',['homepages'=> $homepages,'cofeetotal'=> $cofeetotal,'foodstotal'=> $foodstotal,'dessertstotal'=> $dessertstotal]);
 })->name('admin.index');
-
-
-
-
-
-
-
-
 
 Route::get('/about', function () {
     $abouts = DB::table('abouts')->get();
@@ -67,9 +58,8 @@ Route::get('/contact', function () {
     $faqs = DB::table('faqs')->get();
     $homepages = DB::table('homepages')->get();
     return view('mainpage/contact',['contacts' => $contacts,'faqs' => $faqs,'homepages' => $homepages]);
-    
-})->name('contact.index');
 
+})->name('contact.index');
 
 Route::get('/', function () {
     $homepages = DB::table('homepages')->get();
@@ -78,3 +68,4 @@ Route::get('/', function () {
     $foods = DB::table('foods')->get();
     return view('mainpage/index', ['homepages' => $homepages,'coffes' => $coffes,'desserts' => $desserts,'foods' => $foods,]);
 });
+
