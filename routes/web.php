@@ -58,13 +58,15 @@ Route::get('/admin', function () {
 
 Route::get('/about', function () {
     $abouts = DB::table('abouts')->get();
-    return view('mainpage/about',['abouts' => $abouts,]);
+    $homepages = DB::table('homepages')->get();
+    return view('mainpage/about',['abouts' => $abouts,'homepages' => $homepages]);
 })->name('about.index');
 
 Route::get('/contact', function () {
     $contacts = DB::table('contacts')->get();
     $faqs = DB::table('faqs')->get();
-    return view('mainpage/contact',['contacts' => $contacts,'faqs' => $faqs]);
+    $homepages = DB::table('homepages')->get();
+    return view('mainpage/contact',['contacts' => $contacts,'faqs' => $faqs,'homepages' => $homepages]);
     
 })->name('contact.index');
 
@@ -75,4 +77,10 @@ Route::get('/', function () {
     $desserts = DB::table('desserts')->get();
     $foods = DB::table('foods')->get();
     return view('mainpage/index', ['homepages' => $homepages,'coffes' => $coffes,'desserts' => $desserts,'foods' => $foods,]);
+});
+
+Route::get('/', function () {
+    $homepages = DB::table('homepages')->get();
+
+    return view('mainpage/layout/master', ['homepages' => $homepages]);
 });
