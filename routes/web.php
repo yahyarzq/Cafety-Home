@@ -78,9 +78,3 @@ Route::get('/', function () {
     $foods = DB::table('foods')->get();
     return view('mainpage/index', ['homepages' => $homepages,'coffes' => $coffes,'desserts' => $desserts,'foods' => $foods,]);
 });
-
-Route::get('/', function () {
-    $homepages = DB::table('homepages')->get();
-
-    return view('mainpage/layout/master', ['homepages' => $homepages]);
-});
