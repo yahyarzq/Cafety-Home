@@ -28,9 +28,9 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3><?php echo 111 ?></h3>
+            <h3><?php echo $cofeetotal ?></h3>
 
-            <p>Published News</p>
+            <p>Coffe Menu</p>
           </div>
           <div class="icon">
             <i class="ion ion-document-text"></i>
@@ -43,12 +43,12 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3><?php echo 111 ?><sup style="font-size: 20px"> </sup></h3>
+            <h3><?php echo $foodstotal ?><sup style="font-size: 20px"> </sup></h3>
 
-            <p>Unpublished News</p>
+            <p>Foods Menu</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion ion-document-text"></i>
           </div>
           <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -58,11 +58,11 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3><?php echo 111?> </h3>
-            <p>Authors</p>
+            <h3><?php echo $dessertstotal?> </h3>
+            <p>Desserts Menu</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person"></i>
+            <i class="ion ion-document-text"></i>
           </div>
           <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>

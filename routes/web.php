@@ -40,7 +40,12 @@ Route::resource('coffes', CoffesController::class);
 
 Route::get('/admin', function () {
     $homepages = DB::table('homepages')->get();
-    return view('admin',['homepages'=> $homepages]);
+
+    $cofeetotal = DB::table('coffes')->count();
+    $foodstotal = DB::table('foods')->count();
+    $dessertstotal = DB::table('desserts')->count();
+
+    return view('admin',['homepages'=> $homepages,'cofeetotal'=> $cofeetotal,'foodstotal'=> $foodstotal,'dessertstotal'=> $dessertstotal]);
 })->name('admin.index');
 
 

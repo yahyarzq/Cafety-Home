@@ -55,10 +55,10 @@
                                     <td>{{ $item->title1 }}</td>
                                     <td>{{ $item->deskripsi1 }}</td>
                                     <td>
-                                        <a href="{{ asset('img/' . $item->foto1) }}">Lihat Gambar</a>
+                                        <a href="{{ asset('mainpage/img/' . $item->foto1) }}">Lihat Gambar</a>
                                     </td>
                                     <td>
-                                        <a href="{{ asset('img/' . $item->foto2) }}">Lihat Gambar</a>
+                                        <a href="{{ asset('mainpage/img/' . $item->foto2) }}">Lihat Gambar</a>
                                     </td>
                                     <td>{{ $item->title2 }}</td>
                                     <td>{{ $item->deskripsi2 }}</td>
