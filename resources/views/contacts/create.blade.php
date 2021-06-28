@@ -43,7 +43,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="pictures">No Telepon</label>
-                                    <input type="text" name="alamat" class="form-control @error('pictures') is-invalid @enderror" placeholder=" No Telepon">
+                                    <input type="text" name="notlp" class="form-control @error('pictures') is-invalid @enderror" placeholder=" No Telepon">
                                     <small class="text-danger">@error('deskripsi1') {{$message}} @enderror</small>
                                 </div>
                             </div>
